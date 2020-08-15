@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
-
+import Button from '@material-ui/core/Button';
 /*
   Der Reducer verwaltet den [state]
     - Gibt es noch keinen state kann er sich einen ausdenken :)
@@ -57,7 +57,13 @@ const adapter = connect(
 
 function App({ok,increment}){
   return <>
-    <button onClick={increment}>OK: {ok}</button>
+  <Button 
+  variant="contained" 
+  color="secondary"
+  onClick={increment}
+  >
+        Ok!: {ok}
+      </Button>
   </>;
 }
 
